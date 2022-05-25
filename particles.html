@@ -29,6 +29,7 @@
         session.close();
         console.log(links.length+" links loaded in "+(new Date()-start)+" ms.")
         const gData = { nodes: Object.values(nodes), links: links}
+	console.log(gData);
         const Graph = ForceGraph3D()(elem)
                       .graphData(gData)
                       .nodeAutoColorBy('community')
